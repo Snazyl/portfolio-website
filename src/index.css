@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: aliceblue;
+}
+
+body {
+  background-color: darkslategray;
+}
+
+h1 {
+  font-size: 4vw;
+}
+
+.content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.sub-container {
+  width: 50vw;
+  height: 50vh;
+  perspective: 1000px;
+}
+
+.sub-container:hover .card,
+.sub-container.hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+i {
+  font-size: 4vw;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.card .front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.card .back {
+  transform: rotateY(180deg);
+  cursor: pointer;
+}
+
+.container,
+.narration-container {
+  width: 50%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.narration-container {
+  width: 100vw;
+  background: rgb(173, 119, 242);
+  background: linear-gradient(
+    180deg,
+    rgba(173, 119, 242, 1) 0%,
+    rgba(116, 230, 255, 1) 100%
+  );
+}
+
+.commercial-container {
+  background: rgb(192, 142, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(192, 142, 255, 1) 0%,
+    rgba(244, 105, 105, 1) 100%
+  );
+}
+
+.gaming-container {
+  background: rgb(253, 105, 105);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 105, 105, 1) 0%,
+    rgba(227, 229, 91, 1) 100%
+  );
+}
+
+nav,
+.loud {
+  display: flex;
+  padding: 10px;
+  position: fixed;
+}
+
+nav {
+  right: 0;
+  z-index: 1;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  margin-left: 2vw;
+  margin-right: 5vw;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

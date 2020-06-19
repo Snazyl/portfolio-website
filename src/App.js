@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
+import classnames from "classnames";
 
 function App() {
-  const [cPlaying, setCPlaying] = useState(false);
-  const [gPlaying, setGPlaying] = useState(false);
-  const [nPlaying, setNPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  // const [gPlaying, setGPlaying] = useState(false);
+  // const [nPlaying, setNPlaying] = useState(false);
   // const playAudio = (reel) => {
   //   const commercialReel = yeel);
   //   const playPromise = isPlaying
@@ -26,12 +27,20 @@ function App() {
   //   }
   // };
 
-  const playCommercial = () => {
-    const playback = document.getElementById("commercialReel");
-    playback.pause();
+  const toggleAudio = (e) => {
+    const playback = document.getElementById(
+      `${e.target.getAttribute("name")}`
+    );
+    setIsPlaying(!isPlaying);
+    if (!isPlaying) {
+      playback.play();
+      return;
+    }
+    // if(playback.)
+    playback.play();
     console.log(playback);
   };
-  // useEffect(() => {}, [isPlaying]);
+
   const stop = () => {
     const playback = document.getElementById("commercialReel");
     playback.pause();
@@ -50,9 +59,10 @@ function App() {
             </figure>
             <figure class="back commercial-back">
               <i
-                onClick={playCommercial}
+                onClick={toggleAudio}
+                name="commercialReel"
                 className={
-                  cPlaying
+                  isPlaying
                     ? "fas fa-pause-circle play"
                     : "fas fa-play-circle play"
                 }
@@ -74,8 +84,13 @@ function App() {
             </figure>
             <figure class="back gaming-back">
               <i
-                // onClick={() => playAudio("gamingReel")}
-                class="fas fa-play-circle play"
+                onClick={toggleAudio}
+                name="gamingReel"
+                className={
+                  isPlaying
+                    ? "fas fa-pause-circle play"
+                    : "fas fa-play-circle play"
+                }
               ></i>
             </figure>
           </div>
@@ -86,13 +101,18 @@ function App() {
           <div class="card narration-card">
             <figure class="front narration-front">
               <h1>
-                <i onClick={stop} class="fas fa-book"></i> Narration
+                <i class="fas fa-book"></i> Narration
               </h1>
             </figure>
             <figure class="back narration-back">
               <i
-                // onClick={() => playAudio("narrationReel")}
-                class="fas fa-play-circle play"
+                className={
+                  isPlaying
+                    ? "fas fa-pause-circle play"
+                    : "fas fa-play-circle play"
+                }
+                name="narrationReel"
+                onClick={toggleAudio}
               ></i>
             </figure>
           </div>

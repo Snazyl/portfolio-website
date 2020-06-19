@@ -18,15 +18,12 @@ function App() {
         audio_elements[i].pause();
       }
     }
-    console.log(audio_elements);
     setIsPlaying(!isPlaying);
     if (isPlaying) {
       playback.pause();
       return;
     }
-    // if(playback.)
     playback.play();
-    console.log(playback);
   };
 
   const stop = () => {
@@ -42,10 +39,10 @@ function App() {
           <div className="card commercial-card">
             <figure className="front commercial-front">
               <h1>
-                <i class="fas fa-microphone"></i> Commercial
+                <i className="fas fa-microphone"></i> Commercial
               </h1>
             </figure>
-            <figure class="back commercial-back">
+            <figure className="back commercial-back">
               <i
                 onClick={toggleAudio}
                 name="commercialReel"
@@ -68,15 +65,15 @@ function App() {
       <div className="container gaming-container">
         <div
           className="sub-container"
-          ontouchstart="this.classList.toggle('hover');"
+          // onTouchStart="this.classList.toggle('hover');"
         >
-          <div class="card gaming-card">
-            <figure class="front gaming-front">
+          <div className="card gaming-card">
+            <figure className="front gaming-front">
               <h1>
-                <i class="fas fa-gamepad"></i> Gaming
+                <i className="fas fa-gamepad"></i> Gaming
               </h1>
             </figure>
-            <figure class="back gaming-back">
+            <figure className="back gaming-back">
               <i
                 onClick={toggleAudio}
                 name="gamingReel"
@@ -98,13 +95,13 @@ function App() {
       </div>
       <div className="narration-container">
         <div className="sub-container">
-          <div class="card narration-card">
-            <figure class="front narration-front">
+          <div className="card narration-card">
+            <figure className="front narration-front">
               <h1>
-                <i class="fas fa-book"></i> Narration
+                <i className="fas fa-book"></i> Narration
               </h1>
             </figure>
-            <figure class="back narration-back">
+            <figure className="back narration-back">
               <i
                 className={
                   isPlaying

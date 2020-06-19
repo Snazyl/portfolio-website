@@ -31,9 +31,16 @@ function App() {
     const playback = document.getElementById(
       `${e.target.getAttribute("name")}`
     );
+    let audio_elements = document.getElementsByTagName("audio");
+    for (let i = 0; i < audio_elements.length; i++) {
+      if (audio_elements[i] != e.target) {
+        audio_elements[i].pause();
+      }
+    }
+    console.log(audio_elements);
     setIsPlaying(!isPlaying);
-    if (!isPlaying) {
-      playback.play();
+    if (isPlaying) {
+      playback.pause();
       return;
     }
     // if(playback.)

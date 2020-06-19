@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
-import classnames from "classnames";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -14,7 +13,7 @@ function App() {
     );
     let audio_elements = document.getElementsByTagName("audio");
     for (let i = 0; i < audio_elements.length; i++) {
-      if (audio_elements[i] != e.target) {
+      if (audio_elements[i] !== e.target) {
         audio_elements[i].pause();
       }
     }
@@ -24,11 +23,6 @@ function App() {
       return;
     }
     playback.play();
-  };
-
-  const stop = () => {
-    const playback = document.getElementById("commercialReel");
-    playback.pause();
   };
 
   return (
@@ -55,7 +49,7 @@ function App() {
               <a href="commercial.mp3" download="LeeFosterCommercialReel.mp3">
                 <i
                   className="fas fa-download"
-                  style={{ marginLeft: "10px" }}
+                  // style={{ marginLeft: "10px" }}
                 ></i>
               </a>
             </figure>
@@ -86,7 +80,7 @@ function App() {
               <a href="game.mp3" download="LeeFosterGamingReel.mp3">
                 <i
                   className="fas fa-download"
-                  style={{ marginLeft: "10px" }}
+                  // style={{ marginLeft: "10px" }}
                 ></i>
               </a>
             </figure>
@@ -114,7 +108,7 @@ function App() {
               <a href="narration.mp3" download="LeeFosterNarrationReel.mp3">
                 <i
                   className="fas fa-download"
-                  style={{ marginLeft: "10px" }}
+                  // style={{ marginLeft: "10px" }}
                 ></i>
               </a>
             </figure>

@@ -7,25 +7,6 @@ function App() {
   const [isPlaying, setIsPlaying] = useState(false);
   // const [gPlaying, setGPlaying] = useState(false);
   // const [nPlaying, setNPlaying] = useState(false);
-  // const playAudio = (reel) => {
-  //   const commercialReel = yeel);
-  //   const playPromise = isPlaying
-  //     ? commercialReel.pause()
-  //     : commercialReel.play();
-  //   if (playPromise !== undefined) {
-  //     playPromise
-  //       .then((_) => {
-  //         // Automatic playback started!
-  //         // Show playing UI.
-  //         console.log("audio played auto");
-  //       })
-  //       .catch((error) => {
-  //         // Auto-play was prevented
-  //         // Show paused UI.
-  //         console.log("playback prevented");
-  //       });
-  //   }
-  // };
 
   const toggleAudio = (e) => {
     const playback = document.getElementById(
@@ -74,6 +55,12 @@ function App() {
                     : "fas fa-play-circle play"
                 }
               ></i>
+              <a href="commercial.mp3" download="LeeFosterCommercialReel.mp3">
+                <i
+                  className="fas fa-download"
+                  style={{ marginLeft: "10px" }}
+                ></i>
+              </a>
             </figure>
           </div>
         </div>
@@ -99,6 +86,12 @@ function App() {
                     : "fas fa-play-circle play"
                 }
               ></i>
+              <a href="game.mp3" download="LeeFosterGamingReel.mp3">
+                <i
+                  className="fas fa-download"
+                  style={{ marginLeft: "10px" }}
+                ></i>
+              </a>
             </figure>
           </div>
         </div>
@@ -121,6 +114,12 @@ function App() {
                 name="narrationReel"
                 onClick={toggleAudio}
               ></i>
+              <a href="narration.mp3" download="LeeFosterNarrationReel.mp3">
+                <i
+                  className="fas fa-download"
+                  style={{ marginLeft: "10px" }}
+                ></i>
+              </a>
             </figure>
           </div>
         </div>

@@ -28,6 +28,9 @@ function App() {
   return (
     <div className="content-wrap">
       <Navbar />
+      <div className="img-container">
+        <img src="face.jpg" alt="" />
+      </div>
       <div className="container commercial-container">
         <div className="sub-container">
           <div className="card commercial-card">

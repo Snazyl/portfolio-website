@@ -115,6 +115,26 @@ nav,
   display: flex;
   padding: 10px;
   position: fixed;
+  /* background: black; */
+  /* background: rgba(0, 0, 0, 0.2); */
+}
+
+nav {
+}
+
+.header-name {
+  font-size: 1.2rem;
+  margin-left: 70px;
+  cursor: default;
+  letter-spacing: 5px;
+}
+
+.voice {
+  position: absolute;
+  /* bottom: -20%; */
+  margin-left: 25px;
+  color: rgba(244, 105, 105, 1);
+  letter-spacing: 0px;
 }
 
 .nav-container {
@@ -128,6 +148,7 @@ nav,
   display: flex;
   width: 100%;
   height: 100%;
+  flex-wrap: wrap;
 }
 
 .nav-container div h1 {
@@ -137,15 +158,29 @@ nav,
 }
 
 nav {
-  right: 0%;
+  right: 0;
   z-index: 2;
   width: 100%;
+  top: 0;
   /* background-color: rgba(0, 0, 0, 0.2); */
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .navbar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-contain {
+  display: flex;
+  justify-content: space-between;
+  border: 10px solid black;
 }
 
 .navbar a {
@@ -197,6 +232,11 @@ a {
   margin-left: 5vw;
 }
 
+.img-container {
+  height: 0;
+  width: 0;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1080px) {
   .content-wrap {
@@ -218,6 +258,28 @@ a {
   figure {
     flex-direction: row;
   }
+  .header-name::after {
+    content: "||";
+  }
+}
+
+@media (min-width: 921px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 920px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70%;
+    /* background: rgba(0, 0, 0, 0.4); */
+    transition: 1s ease-in-out;
+  }
+  li {
+    float: right;
+  }
 }
 
 @media (min-width: 1081px) {
@@ -238,5 +300,17 @@ a {
   
   margin-top: -100px; */
     border-radius: 50%;
+  }
+
+  .header-name {
+    font-size: 2rem;
+    margin-left: 70px;
+    cursor: default;
+  }
+
+  .voice {
+    position: absolute;
+    bottom: -20%;
+    color: rgba(244, 105, 105, 1);
   }
 }

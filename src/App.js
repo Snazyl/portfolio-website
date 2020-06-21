@@ -27,12 +27,12 @@ function App() {
 
   return (
     <div className="content-wrap">
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="img-container">
         <img src="face.jpg" alt="" />
       </div>
       <div className="container commercial-container">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="sub-container">
           <div className="card commercial-card">
             <figure className="front commercial-front">

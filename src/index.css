@@ -132,7 +132,7 @@ nav {
 .voice {
   position: absolute;
   /* bottom: -20%; */
-  margin-left: 25px;
+  /* margin-left: 25px; */
   color: rgba(244, 105, 105, 1);
   letter-spacing: 0px;
 }
@@ -226,6 +226,16 @@ a {
   color: white;
 }
 
+.fa-bars {
+  transition: 250ms ease-in;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.fa-bars:hover {
+  color: #cccccc;
+}
+
 /* MISC */
 .fa-download {
   margin-top: 0;
@@ -261,8 +271,10 @@ a {
   .header-name::after {
     content: "||";
   }
+  .voice {
+    margin-left: 25px;
+  }
 }
-
 @media (min-width: 921px) {
   .hamburger {
     display: none;
@@ -272,13 +284,17 @@ a {
 @media (max-width: 920px) {
   .navbar {
     display: none;
-    position: absolute;
-    top: 70%;
+    /* position: absolute; */
+    /* top: 70%; */
     /* background: rgba(0, 0, 0, 0.4); */
     transition: 1s ease-in-out;
+    margin-top: 25px;
+    border: 1px solid black;
+    height: 100%;
   }
   li {
-    float: right;
+    /* float: right; */
+    /* margin-right: -30px; */
   }
 }
 
@@ -312,5 +328,17 @@ a {
     position: absolute;
     bottom: -20%;
     color: rgba(244, 105, 105, 1);
+  }
+}
+
+@media (max-width: 500px) {
+  .header-name {
+    margin-left: 20px;
+  }
+  .header-name::after {
+    content: "";
+  }
+  .voice {
+    display: none;
   }
 }

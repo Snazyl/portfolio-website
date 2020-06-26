@@ -1,19 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Navbar = () => {
-  const [show, setShow] = useState(false);
-
-  const hamburger = () => {
-    const nav = document.getElementsByClassName("navbar");
-    if (!show) {
-      nav[0].style.display = "block";
-      setShow(true);
-    } else {
-      nav[0].style.display = "none";
-      setShow(false);
-    }
-  };
-
   return (
     <header>
       <nav>

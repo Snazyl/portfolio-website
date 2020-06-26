@@ -361,6 +361,15 @@ a {
   nav li {
     margin-bottom: 1em;
     margin-left: 1em;
+    padding: 1px;
+  }
+
+  nav li:hover {
+    background: rgba(207, 207, 207, 0.623);
+  }
+
+  nav li:hover a {
+    color: black;
   }
 
   .nav-toggle:checked ~ ul {

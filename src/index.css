@@ -314,6 +314,7 @@ a {
     height: 100%;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .nav-toggle-label span,
@@ -335,18 +336,19 @@ a {
 
   .nav-toggle-label span::before {
     bottom: 7px;
-    height: 1px;
+    height: 2.5px;
   }
 
   .nav-toggle-label span::after {
     top: 7px;
+    height: 2.5px;
   }
 
   header {
     position: fixed;
     z-index: 998;
     width: 100%;
-    height: 7%;
+    height: 47px;
     /* background: red; */
   }
 
@@ -382,6 +384,14 @@ a {
   .nav-toggle:checked ~ ul a {
     opacity: 1;
     transition: opacity 150ms ease-in-out 250ms;
+  }
+
+  .voice {
+    display: none;
+  }
+
+  .header-name::after {
+    content: "";
   }
 }
 

@@ -119,7 +119,9 @@ nav,
   /* background: rgba(0, 0, 0, 0.2); */
 }
 
-nav {
+.nav-toggle {
+  display: none;
+  /* z-index: 100; */
 }
 
 .header-name {
@@ -275,26 +277,111 @@ a {
     margin-left: 25px;
   }
 }
-@media (min-width: 921px) {
-  .hamburger {
-    display: none;
-  }
-}
 
 @media (max-width: 920px) {
   .navbar {
-    display: none;
+    /* display: none; */
     /* position: absolute; */
     /* top: 70%; */
     /* background: rgba(0, 0, 0, 0.4); */
-    transition: 1s ease-in-out;
-    margin-top: 25px;
-    border: 1px solid black;
-    height: 100%;
+    display: block;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
   }
-  li {
-    /* float: right; */
-    /* margin-right: -30px; */
+
+  .navbar a::after {
+    transform: scaleX(0);
+  }
+
+  .nav-toggle {
+    display: none;
+    /* z-index: 100; */
+  }
+
+  .nav-toggle-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+  }
+
+  .nav-toggle-label span::before {
+    bottom: 7px;
+    height: 1px;
+  }
+
+  .nav-toggle-label span::after {
+    top: 7px;
+  }
+
+  header {
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: 7%;
+    /* background: red; */
+  }
+
+  nav ul {
+    /* text-align: center; */
+    margin: 0;
+    padding: 0;
+  }
+
+  nav li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+
+  .nav-toggle:checked ~ ul {
+    transform: scale(1, 1);
+  }
+
+  nav {
+    display: block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+  }
+
+  nav a {
+    opacity: 0;
+    transition: opacity 250ms linear;
+    -webkit-transition: opacity 2.5s;
+    -moz-transition: opacity 2.5s;
+  }
+
+  .nav-toggle:checked ~ ul a {
+    opacity: 1;
+    transition: opacity 150ms ease-in-out 250ms;
   }
 }
 

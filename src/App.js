@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar";
+import Footer from "./components/footer";
 
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -140,6 +141,7 @@ function App() {
             <i class="fas fa-play-circle play"></i>
           </figure>
         </div> */}
+      <Footer />
     </div>
   );
 }

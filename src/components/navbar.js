@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter, Router } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -13,15 +14,15 @@ const Navbar = () => {
           <input id="nav-toggle" type="checkbox" className="nav-toggle" />
           <ul className="navbar">
             <li className="link1">
-              <a className="active-page" href="#">
+              <a className="active-page" href="/">
                 HOME
               </a>
             </li>
             <li className="link2">
-              <a href="#">TESTIMONIALS</a>
+              <a href="/about">ABOUT ME</a>
             </li>
             <li className="link3">
-              <a href="#">CONTACT</a>
+              <a href="/contact">CONTACT</a>
             </li>
           </ul>
         </div>

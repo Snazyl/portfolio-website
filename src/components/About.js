@@ -32,6 +32,7 @@ const About = () => {
 
   return (
     <div className="about_me">
+      <div className="layer"></div>
       <div className="intro">
         <div className="experience">
           <h1>About me</h1>
@@ -53,11 +54,16 @@ const About = () => {
           <h1>Equipment</h1>
           <p>
             <ul>Microphone</ul>
-            <li>Sennheiser MKH 416 Shotgun Microphone.</li>
+            <div className="support">
+              <li>Sennheiser MKH 416 Shotgun Microphone.</li>
+            </div>
             <ul>Recording Space</ul>
-            <li>
-              Private voice recording booth with proper acoustic treatment.
-            </li>
+            <div className="support">
+              <li>
+                Private voice recording booth with proper acoustic treatment.
+              </li>
+            </div>
+
             <ul>Supporting Equipment</ul>
             <div className="support">
               <li>Focusrite Solo 3rd Gen audio interface.</li>

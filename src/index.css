@@ -8,7 +8,7 @@
 
 body {
   /* background-color: rgba(0, 0, 0, 0.178); */
-  background: url(bg.jpg) no-repeat fixed center;
+  background: url(bg2.jpg) no-repeat fixed center;
   /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1); */
 }
 
@@ -430,7 +430,7 @@ tr:nth-child(odd) {
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   /* background: url(bg1.jpg) fixed no-repeat center; */
   /* background: rgba(0, 0, 0, 0.5); */
   backdrop-filter: blur(35px);
@@ -505,9 +505,6 @@ form textarea {
   100% {
     transform: scale(1);
   }
-}
-
-form input:active {
 }
 
 /* FOOTER */
